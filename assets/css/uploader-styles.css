@@ -12,6 +12,13 @@
     font-family: 'Poppins', sans-serif;
     color: #333;
   }
+
+@media (max-width: 768px) {
+    .upload-container {
+        margin: 0 auto;
+        padding: 15px;
+    }
+}
   
   h1 {
     font-family: 'Pacifico', cursive;
@@ -20,6 +27,14 @@
     margin-bottom: 30px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
   }
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.4em;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
   
   input[type="file"] {
     display: none;
@@ -56,22 +71,22 @@ input[type="file"] {
     font-size: 0.95em;
   }
   
-  /* Spezifische Styles (Beispiel) */
+  
   .select-button {
-    border: 2px solid #4db6ac; /* Beispiel: Solider Rand */
+    border: 2px solid #00796b; /* Beispiel: Dunklerer Rand */
     background-color: #ffffff;
     color: #00796b;
   }
   
   .select-button:hover {
-    background-color: #e0f2f1;
-    border-color: #26a69a;
+    background-color: #b2dfdb; /* Beispiel: Etwas dunkler */
+    border-color: #004d40;
     transform: translateY(-2px);
   }
   
   .camera-button {
     border: 2px solid #00796b; /* Beispiel: Dunklerer Rand */
-    background-color: #e0f2f1; /* Beispiel: Leicht grüner Hintergrund */
+    background-color: #ffffff;
     color: #00796b;
   }
   
@@ -173,6 +188,12 @@ input[type="file"] {
       padding-top: 20px;
       border-top: 1px solid #b2dfdb; /* Leichte Trennlinie */
   }
+
+  @media (max-width: 768px) {
+    .file-actions {
+        margin-top: 10px;
+    }
+}
   
   .file-actions span:first-child { /* Der Text "Super! Hier ist dein Bild:" */
       display: block;
