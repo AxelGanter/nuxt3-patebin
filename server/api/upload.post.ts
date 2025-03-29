@@ -15,6 +15,7 @@ import path from 'path';
 // UPLOAD_DIR wird nicht mehr direkt zum Speichern benötigt, aber vielleicht für Dateinamen
 // const UPLOAD_DIR = path.join(process.cwd(), 'public', 'uploads');
 
+
 export default defineEventHandler(async (event) => {
   // Kein fs.mkdir mehr nötig für Blob Storage
 
@@ -39,10 +40,8 @@ export default defineEventHandler(async (event) => {
 
     // Sanitize filename (wichtig!)
     const originalFilename = fileData.filename;
-    // Erzeugt einen eindeutigen Pfad/Namen im Blob Store
-    // z.B. 'uploads/timestamp-sanitized-filename.jpg'
-    const sanitizedFilename = `<span class="math-inline">\{Date\.now\(\)\}\-</span>{originalFilename.replace(/[^a-zA-Z0-9._-]/g, '')}`;
-    const pathname = `uploads/${sanitizedFilename}`; // Pfad im Blob Store
+    const sanitizedFilename = `${Date.now()}-${originalFilename.replace(/[^a-zA-Z0-9._-]/g, '')}`; 
+    const pathname = `uploads/${sanitizedFilename}`; 
 
     console.log(`Uploading to Vercel Blob at path: ${pathname}`);
 
