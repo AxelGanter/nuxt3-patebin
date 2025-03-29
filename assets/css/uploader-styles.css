@@ -25,28 +25,63 @@
     display: none;
   }
   
-  .custom-file-upload {
-    border: 2px dashed #4db6ac;
-    border-radius: 15px;
-    display: inline-block;
-    padding: 12px 20px;
-    cursor: pointer;
-    background-color: #ffffff;
-    color: #00796b;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
+  
+
+/* Verstecke BEIDE file inputs */
+input[type="file"] {
+    display: none;
   }
   
-  .custom-file-upload:hover {
+  /* Container für die beiden Auswahl-Buttons */
+  .input-options {
+    display: flex; /* Ordnet Buttons nebeneinander an */
+    justify-content: center; /* Zentriert die Buttons */
+    gap: 15px; /* Abstand zwischen den Buttons */
+    margin-bottom: 25px; /* Abstand nach unten */
+    flex-wrap: wrap; /* Umbruch auf kleinen Bildschirmen */
+  }
+  
+  /* Gemeinsamer Style für die Auswahl-Buttons (Labels) */
+  .input-option-button {
+    display: inline-flex; /* Ermöglicht flex alignment für Icon/Text */
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Abstand zwischen Icon und Text */
+    padding: 12px 20px;
+    border-radius: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95em;
+  }
+  
+  /* Spezifische Styles (Beispiel) */
+  .select-button {
+    border: 2px solid #4db6ac; /* Beispiel: Solider Rand */
+    background-color: #ffffff;
+    color: #00796b;
+  }
+  
+  .select-button:hover {
     background-color: #e0f2f1;
     border-color: #26a69a;
     transform: translateY(-2px);
   }
+  
+  .camera-button {
+    border: 2px solid #00796b; /* Beispiel: Dunklerer Rand */
+    background-color: #e0f2f1; /* Beispiel: Leicht grüner Hintergrund */
+    color: #00796b;
+  }
+  
+  .camera-button:hover {
+    background-color: #b2dfdb; /* Beispiel: Etwas dunkler */
+    border-color: #004d40;
+    transform: translateY(-2px);
+  }
+
+
   
   .image-preview {
     margin-top: 25px;
