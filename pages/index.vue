@@ -103,7 +103,11 @@ const uploadImage = async () => {
     const response = await $fetch('/api/upload', { method: 'POST', body: formData });
     if (response.success) {
       uploadSuccess.value = response.message || 'Datei erfolgreich hochgeladen!';
-      uploadedFilePath.value = response.filePath;
+      if ('filePath' in response && response.filePath){
+          uploadedFilePath.value = response.filePath.replace(/\\/g, '/'); // Ersetze Backslashes durch Vorwärtsslashes
+        }else{
+          uploadedFilePath.value = "noFilePathProvided"; // Fallback-URL
+        }        
     } else {
        throw new Error(response.message || 'Backend meldet einen Fehler.');
     }
