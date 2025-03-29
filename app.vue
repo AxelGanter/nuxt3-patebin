@@ -2,6 +2,7 @@
   <div>
     <main>
       <NuxtPage />
+      <Impressum />
     </main>
 
     </div>
