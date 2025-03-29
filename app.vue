@@ -8,6 +8,7 @@
 </template>
 
 <script setup lang="ts">
+import { Analytics } from '@vercel/analytics/nuxt'
 // Normalerweise braucht app.vue hier wenig bis keinen spezifischen Script-Code,
 // es sei denn, Sie verwalten globale Zustände oder Layout-Logik.
 </script>
